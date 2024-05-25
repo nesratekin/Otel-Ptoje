@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>SerSerY</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="images/mt logo1.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/sitl.css" />
+    <link rel="stylesheet" href="assets/css/baslık.css" />
+    <link rel="stylesheet" href="assets/css/yazı.css" />
+    <link rel="stylesheet" href="assets/css/up.css" />
+
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="eklentiler/bower_components/Ionicons/css/ionicons.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="eklentiler/dist/css/AdminLTE.css">
+  <link rel="stylesheet" href="eklentiler/bower_components/bootstrap/dist/css/bootstrap.css">
+
+    <noscript><link rel="stylesheet" href="assets/css/baslık.css" /></noscript>
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        SİTE AYARLARI İŞLEMLERİ
+        <p>
+        <small>ADMİN PANELİ</small>
+      </h1>
+    </section>
+
+  <!-- Main content -->
+    <section class="content">
+
+      <!-- /.row -->
+      <!-- Main row -->
+      <div class="row">
+
+    <div class="col-md-6">
+
+      <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Site Ayarları</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" action="jawnes site/admin.php" method="POST">
+              <div class="box-body">
+
+
+
+          <div class="alert alert-warning">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+          <h4><i class="icon fa fa-ban"></i> BİLGİLERİ DOGRU ŞEKİLDE DOLDURUNUZ!  </h4>
+          </div>
+<!-- site başlık - site açıklaması - anahtar kelimeler - Site durum -->
+
+
+                <div class="form-group">
+                  <label for="site_baslik">Site Başlığı</label>
+                  <input name="site_baslik" type="text" class="form-control" id="site_baslik" placeholder="Site Başlığı" value="<?php echo $baslik ?>">
+                </div>
+
+        <div class="form-group">
+                  <label>Site Açıklaması</label>
+                  <textarea name="site_aciklama" class="form-control" rows="3">Site açıkalaması </textarea>
+                </div>
+
+        <div class="form-group">
+                  <label>Anahtar Kelimeler</label>
+                  <textarea name="anahtar_kelimeler" class="form-control" rows="3">Anahtar kelimeler</textarea>
+                </div>
+
+        <div class="form-group">
+                  <label>Site Durum</label>
+                  <select name="site_durum" class="form-control">
+                    <option ?php if($durum==1) echo selected ?>Aktif</option>
+                    <option ?php if($durum==2) echo selected ?>Pasif</option>
+                  </select>
+                </div>
+
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+              </div>
+            </form>
+          </div>
+
+
+    </div>
+
+
+
+      </div>
+      <!-- /.row (main row) -->
+
+    </section>
